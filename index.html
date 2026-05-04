@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robbie Wei - Yuanda Australia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 450px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .header-banner {
+            height: 220px;
+            background: linear-gradient(135deg, #52b788 0%, #2b6cb0 100%);
+            position: relative;
+        }
+
+        .avatar-container {
+            position: absolute;
+            left: 50%;
+            bottom: -50px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: #eee;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666;
+        }
+
+        .profile-info {
+            margin-top: 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .profile-info h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        .profile-info p {
+            font-size: 15px;
+            color: #4a5568;
+        }
+
+        .quick-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .action-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .add-contact-btn {
+            display: block;
+            margin: 0 20px 20px;
+            padding: 14px;
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            width: calc(100% - 40px);
+        }
+
+        .contact-list {
+            padding: 0 20px 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+            gap: 12px;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 15px;
+            color: #1a202c;
+        }
+
+        .contact-value a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .social-section {
+            padding: 0 20px 30px;
+        }
+
+        .social-section h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #1a202c;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            gap: 12px;
+            text-decoration: none;
+            color: #1a202c;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .whatsapp { background: #25d366; }
+        .youtube { background: #ff0000; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 顶部渐变横幅 -->
+        <div class="header-banner">
+            <div class="avatar-container">
+                <!-- 你的照片可以放在这里，替换下面的注释部分 -->
+                <div class="avatar">
+                    <!-- 上传你的头像到仓库，命名为 avatar.jpg，然后用下面这行代码替换 -->
+                    <img src="avatar.jpg" alt="Robbie Wei" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                </div>
+            </div>
+        </div>
+
+        <!-- 个人信息 -->
+        <div class="profile-info">
+            <h1>Robbie Wei</h1>
+            <p>Head, Business Development</p>
+        </div>
+
+        <!-- 快捷操作按钮 -->
+        <div class="quick-actions">
+            <a href="tel:+61404228288" class="action-btn">📞</a>
+            <a href="mailto:robbie.wei@yuanda.com.au" class="action-btn">✉️</a>
+            <a href="https://maps.google.com/?q=Collins+Street,+530,+Melbourne,+VIC,+3000,+Australia" target="_blank" class="action-btn">📍</a>
+        </div>
+
+        <!-- 增加联系人按钮（只是样式，实际功能可以用手机自带的扫码保存） -->
+        <button class="add-contact-btn">增加联系人</button>
+
+        <!-- 联系方式列表 -->
+        <div class="contact-list">
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                    <div class="contact-label">电话</div>
+                    <div class="contact-value"><a href="tel:+61404228288">+61 404 228 288</a></div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                    <div class="contact-label">电子邮箱</div>
+                    <div class="contact-value"><a href="mailto:robbie.wei@yuanda.com.au">robbie.wei@yuanda.com.au</a></div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div class="contact-details">
+                    <div class="contact-label">网站</div>
+                    <div class="contact-value"><a href="https://www.yuanda.com.au" target="_blank">www.yuanda.com.au</a></div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div class="contact-details">
+                    <div class="contact-label">网站</div>
+                    <div class="contact-value"><a href="https://www.yuandacn.com" target="_blank">www.yuandacn.com</a></div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                    <div class="contact-label">地址</div>
+                    <div class="contact-value">Collins Street, 530, Melbourne, VIC, 3000, Australia</div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🏢</div>
+                <div class="contact-details">
+                    <div class="contact-label">公司</div>
+                    <div class="contact-value">Yuanda Australia Pty Ltd<br>Head, Business Development</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关注我/社交链接 -->
+        <div class="social-section">
+            <h3>关注我</h3>
+            <a href="https://wa.me/61404228288" target="_blank" class="social-item">
+                <div class="social-icon whatsapp">💬</div>
+                WhatsApp
+                <span style="margin-left:auto; color:#999;">→</span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCxxxxxx" target="_blank" class="social-item">
+                <div class="social-icon youtube">▶️</div>
+                YouTube<br>
+                <span style="font-size:12px; color:#718096;">Yuanda Introduction</span>
+                <span style="margin-left:auto; color:#999;">→</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
