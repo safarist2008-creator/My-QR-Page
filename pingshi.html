@@ -24,6 +24,24 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative; /* 新增：用于二维码定位 */
+        }
+
+        /* 新增：右上角二维码样式 */
+        .corner-qr {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .corner-qr img {
+            width: 70px;
+            height: 70px;
+            display: block;
         }
 
         .header-banner {
